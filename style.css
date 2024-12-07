@@ -1,0 +1,238 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #000;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    background-color: #ffffff;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.logo-circle {
+    width: 40px;
+    height: 40px;
+    background-color: #00754a;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.logo-container h1 {
+    font-size: 24px;
+    margin: 0;
+    color: #000;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #00754a;
+}
+
+/* Header Right Section */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-location {
+    display: flex;
+    gap: 10px;
+}
+
+.search-bar {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.location-selector {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Icons */
+.icons {
+    display: flex;
+    gap: 10px;
+}
+
+.icon {
+    font-size: 24px;
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.icon:hover {
+    color: #00754a;
+}
+
+/* Slideshow */
+.slideshow-container {
+    margin: 40px 0;
+}
+
+.slideshow {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.slideshow img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slideshow img.active {
+    opacity: 1;
+}
+
+/* Book Your Shoot Section */
+.book-your-shoot {
+    text-align: left;
+    margin: 50px 0;
+}
+
+.book-your-shoot h2 {
+    font-size: 28px;
+    color: #000;
+    margin-bottom: 30px;
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 buttons per row */
+    gap: 40px 30px; /* Add more vertical (row) spacing */
+    justify-content: space-evenly; /* Distribute buttons evenly across the row */
+}
+
+.button-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px; /* Increase space between button and description */
+}
+
+.circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.circle:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
+}
+
+.button-label {
+    font-size: 14px;
+    color: #000;
+    text-align: center; /* Center align text */
+}
+
+
+/* Special Offers Section */
+.special-offers {
+    margin: 60px 0;
+    text-align: left;
+}
+
+.special-offers h2 {
+    font-size: 28px;
+    color: #000;
+    margin-bottom: 30px;
+}
+
+.offers-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.offer-item {
+    flex: 1;
+    max-width: 30%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.offer-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+.offer-item .offer-text {
+    padding: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+.offer-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Additional Slideshow */
+.slideshow-container + .slideshow-container {
+    margin-top: 60px;
+}
