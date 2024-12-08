@@ -25,7 +25,6 @@ body {
 .logo-container {
     display: flex;
     align-items: center;
-    flex: 1;
 }
 
 .logo-circle {
@@ -106,23 +105,29 @@ body {
     color: #00754a;
 }
 
-/* Slideshow */
+/* Slideshow Container */
 .slideshow-container {
     margin: 40px 0;
+    width: 100%;
+    height: 400px; /* Fixed height of 400px */
+    max-width: 1920px; /* Prevent stretching beyond 1920px width */
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
 }
 
+/* Slideshow */
 .slideshow {
     position: relative;
     width: 100%;
-    height: 250px;
-    overflow: hidden;
-    border-radius: 10px;
+    height: 100%;
 }
 
+/* Slideshow Images */
 .slideshow img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain; /* Ensures images fill the container properly */
     position: absolute;
     top: 0;
     left: 0;
@@ -133,6 +138,8 @@ body {
 .slideshow img.active {
     opacity: 1;
 }
+
+
 
 /* Book Your Shoot Section */
 .book-your-shoot {
@@ -149,15 +156,15 @@ body {
 .button-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr); /* 5 buttons per row */
-    gap: 40px 30px; /* Add more vertical (row) spacing */
-    justify-content: space-evenly; /* Distribute buttons evenly across the row */
+    gap: 40px 30px;
+    justify-content: space-evenly;
 }
 
 .button-item {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5px; /* Increase space between button and description */
+    gap: 5px;
 }
 
 .circle {
@@ -178,9 +185,8 @@ body {
 .button-label {
     font-size: 14px;
     color: #000;
-    text-align: center; /* Center align text */
+    text-align: center;
 }
-
 
 /* Special Offers Section */
 .special-offers {
@@ -198,11 +204,12 @@ body {
     display: flex;
     gap: 30px;
     justify-content: space-between;
+    flex-wrap: wrap; /* Ensures items wrap on smaller screens */
 }
 
 .offer-item {
     flex: 1;
-    max-width: 30%;
+    max-width: 30%;  /* Limits the width of the offer items */
     position: relative;
     overflow: hidden;
     border-radius: 10px;
@@ -232,7 +239,53 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Additional Slideshow */
-.slideshow-container + .slideshow-container {
+
+
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 20px;
     margin-top: 60px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.footer-section p, .footer-section a {
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    line-height: 1.8;
+}
+
+.footer-section a:hover {
+    color: #00754a;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+    .footer-section {
+        width: 100%;
+        text-align: center;
+    }
 }
